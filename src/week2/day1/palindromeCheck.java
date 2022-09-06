@@ -13,15 +13,18 @@ public class palindromeCheck {
         String in = input.next();
 
         int length = in.length();
-//        System.out.println(length);
         int i =0;
 
         while(i<length/2){
-//            System.out.println(in.charAt(i));
-//            if(in.charAt(i).equals(in.charAt(length - i - 1)))
-
+            Character begining = in.charAt(i);
+            Character end = in.charAt(length - i - 1);
+           if(!begining.equals(end)){
+               System.out.println(in + " is not a palindrome");
+               return;
+           }
             i++;
         }
-//        System.out.println("true");
+
+        System.out.println(in + " is palindrome");
     }
 }
