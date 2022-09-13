@@ -10,15 +10,17 @@ public class checknumberispalindrome {
         System.out.print("Enter a number : ");
         int num = in.nextInt();
         int temp =num;
-        int output = 1;
+        int output = 0;
 
         while(temp>0){
-            System.out.println("temp is " + temp%10);
-            output = (temp % 10) * output;
+            output =( output*10) + (temp%10);
             temp /= 10;
-            System.out.println("temp was " + output);
         }
 
-        System.out.print(output);
+        if(output == num){
+            System.out.print(output + " is palindrome");
+        }else{
+            System.out.print(output + " is not a palindrome");
+        }
     }
 }
