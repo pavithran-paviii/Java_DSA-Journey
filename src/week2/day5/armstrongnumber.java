@@ -15,7 +15,6 @@ public class armstrongnumber {
         while (numcopy>0){
             int lastno = numcopy % 10;
             output += Math.pow(lastno,3);
-
             numcopy /= 10;
         }
 
